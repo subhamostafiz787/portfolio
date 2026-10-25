@@ -170,9 +170,6 @@ html.g .order:hover{transform:none}
 /* WORK PAGE */
 .page-work .work{padding-top:calc(150px + env(safe-area-inset-top, 0px))}
 .page-title{margin:14px 0 0}
-.filters{display:flex;flex-wrap:wrap;gap:10px;margin:-28px 0 clamp(40px,5vw,64px)}
-.chip{min-height:44px;padding:10px 20px;border-radius:999px;border:1.5px solid var(--espresso);background:transparent;cursor:pointer;font-size:15px;transition:background .25s,color .25s}
-.chip[aria-pressed="true"]{background:var(--espresso);color:var(--cream)}
 .card[hidden]{display:none}
 a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
 

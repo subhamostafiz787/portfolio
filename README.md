@@ -4,9 +4,9 @@ Plain HTML, CSS and JS. No build step and no dependencies.
 
 ```
 index.html   home: hero, the brew story, "See the work" link, contact
-work.html    the work page: project cards and filters
+work.html    the work page: project cards
 styles.css   all styles for both pages (palette tokens are at the top)
-main.js      both pages: scroll-drawn line, page transition, nav, filters, order counter, cursor
+main.js      both pages: scroll-drawn line, page transition, nav, order counter, cursor
 .nojekyll    tells GitHub Pages to serve files as-is
 ```
 

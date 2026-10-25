@@ -2,7 +2,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var G = !!(window.gsap && window.ScrollTrigger) && !reduce;
-  if (G) { gsap.registerPlugin(ScrollTrigger); if (window.Flip) gsap.registerPlugin(Flip); document.documentElement.classList.add('g'); }
+  if (G) { gsap.registerPlugin(ScrollTrigger); document.documentElement.classList.add('g'); }
 
   function $(sel) { return document.querySelector(sel); }
   function $$(sel) { return [].slice.call(document.querySelectorAll(sel)); }
@@ -262,25 +262,6 @@
     } catch (e) { selectAddr(); done('Selected, press copy'); }
   });
 
-  /* ---------- work filters (work page) ---------- */
-  var chips = $$('.chip'), cards = $$('#menuGrid .card');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
-      var state = (G && window.Flip) ? Flip.getState(cards) : null;
-      cards.forEach(function (card) { card.hidden = !(f === 'all' || card.getAttribute('data-cat') === f); });
-      if (state) {
-        Flip.from(state, {
-          duration: 0.7, ease: 'power3.inOut', absolute: true, scale: true,
-          onEnter: function (els) { return gsap.fromTo(els, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.6 }); },
-          onLeave: function (els) { return gsap.to(els, { opacity: 0, scale: 0.92, duration: 0.4 }); },
-          onComplete: function () { ScrollTrigger.refresh(); }
-        });
-      }
-    });
-  });
-
   /* ---------- cursor ---------- */
   var cursor = $('.cursor');
   if (cursor && fine && !reduce) {
@@ -307,7 +288,7 @@
     if (title) {
       title.innerHTML = title.textContent.trim().split(/\s+/).map(function (w) { return '<span class="w"><span class="wi">' + w + '</span></span>'; }).join(' ');
       gsap.from('.page-title .wi', { yPercent: 110, duration: 1, stagger: 0.08, ease: 'power3.out', delay: 0.15 });
-      gsap.from('.work .head p, .filters', { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, delay: 0.45, ease: 'power3.out' });
+      gsap.from('.work .head p', { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, delay: 0.45, ease: 'power3.out' });
     }
 
     // sections rise in as they arrive
@@ -329,7 +310,7 @@
 
     // magnetic controls (mouse only)
     if (fine) {
-      gsap.utils.toArray('.order, .copy, #next, .logo, .scroll-cue, .chip, .cta-big i').forEach(function (el) {
+      gsap.utils.toArray('.order, .copy, #next, .logo, .scroll-cue, .cta-big i').forEach(function (el) {
         var xTo = gsap.quickTo(el, 'x', { duration: 0.4, ease: 'power3' }), yTo = gsap.quickTo(el, 'y', { duration: 0.4, ease: 'power3' });
         el.addEventListener('pointermove', function (e) {
           var r = el.getBoundingClientRect();
