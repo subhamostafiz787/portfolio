@@ -131,7 +131,7 @@ button{font:inherit;color:inherit}
 .foot{background:var(--espresso);color:var(--cream);padding-block:56px 40px}
 .foot .wrap{display:flex;flex-direction:column;gap:48px}
 .foot .top{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
-.big{font-size:clamp(72px,14vw,220px);font-weight:700;letter-spacing:-.06em;line-height:.78;display:flex}
+.big{font-size:clamp(44px,11vw,180px);font-weight:700;letter-spacing:-.06em;line-height:.78;display:flex}
 .big span{display:inline-block;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 .big:hover span:nth-child(1){transform:translateY(-14px) rotate(-8deg)}
 .big:hover span:nth-child(2){transform:translateY(6px) rotate(6deg)}
