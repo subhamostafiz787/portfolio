@@ -90,7 +90,7 @@
     ];
     var stage = $('#stage'), strip = $('#strip'), svg = $('#line'), pen = $('#pen');
     halo = $('#halo');
-    var chapters = $$('.chapter'), ticks = $$('#ticks i');
+    var chapters = $$('.chapter');
     var chNum = $('#chNum'), chName = $('#chName'), nextBtn = $('#next');
 
     var ox = function (el) { var g = el.closest('g[data-ox]'); return g ? parseFloat(g.getAttribute('data-ox')) : 0; };
@@ -192,7 +192,6 @@
       if (idx !== active) {
         var prev = active; active = idx;
         swapChapter(idx, prev);
-        ticks.forEach(function (el, n) { el.classList.toggle('on', n <= idx); });
         chNum.textContent = '0' + idx;
         chName.textContent = CH[idx].name;
         nextBtn.innerHTML = idx < CH.length - 1 ? 'Keep brewing <i>→</i>' : 'On the menu <i>↓</i>';

@@ -80,11 +80,8 @@ button{font:inherit;color:inherit}
 @keyframes waft{50%{transform:translateY(-6px) skewX(-6deg)}}
 .stage-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px 26px}
 .stage-foot .now{display:flex;gap:14px;align-items:center;font-variant-numeric:tabular-nums}
-.ticks{display:flex;gap:6px}
-.ticks i{width:18px;height:2px;background:currentColor;opacity:.25;transition:opacity .4s,width .4s}
-.ticks i.on{opacity:1;width:30px}
 .next{background:none;border:0;padding:10px 0;cursor:pointer;min-height:44px}
-@media (max-width:640px){.ticks{display:none}.chapter p.body{padding-top:0}}
+@media (max-width:640px){.chapter p.body{padding-top:0}}
 
 /* WORK */
 .work{background:var(--cream);color:var(--espresso);padding-block:clamp(96px,12vw,160px)}
