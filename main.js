@@ -39,7 +39,7 @@
   if (G && wipe) {
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute('href');
-      if (!/^(index|work)\.html/.test(href)) return;
+      if (!/^(index|work|notebookcrm)\.html/.test(href)) return;
       var samePage = href.split('#')[0] === (location.pathname.split('/').pop() || 'index.html');
       if (samePage) return;
       a.addEventListener('click', function (e) {

@@ -5,6 +5,7 @@ Plain HTML, CSS and JS. No build step and no dependencies.
 ```
 index.html   home: hero, the brew story, "See the work" link, contact
 work.html    the work page: project cards
+notebookcrm.html  case study page: prototype link + embedded PDF (files in projects/notebookcrm/)
 styles.css   all styles for both pages (palette tokens are at the top)
 main.js      both pages: scroll-drawn line, page transition, nav, order counter, cursor
 .nojekyll    tells GitHub Pages to serve files as-is
