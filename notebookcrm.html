@@ -61,19 +61,219 @@
     </div>
   </section>
 
-  <section class="case-doc" data-bg="#E2D9CB" data-ink="#2A1A14">
-    <div class="wrap">
-      <div class="doc-head">
-        <div><p class="eyebrow">The full case study</p><h2>Research, decisions and screens.</h2></div>
-        <div class="doc-actions">
-          <a class="u link-arrow" href="projects/notebookcrm/notebookcrm-case-study.pdf" target="_blank" rel="noopener">Open the PDF <i>↗</i></a>
-          <a class="u link-arrow" href="projects/notebookcrm/notebookcrm-case-study.pdf" download>Download <i>↓</i></a>
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">01</p><h2>Overview</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Independent creators run a small business with one workflow: track metrics, find a brand, pitch, follow up, quote a rate and send an invoice. Today that workflow is spread across Linktree, a spreadsheet, Gmail threads, a Notion deal tracker and a separate media kit.</p>
+        <p>notebookCRM connects those steps in one place. The product is built around a single loop. My research found no competitor that covers this loop from the creator's side.</p>
+        <ol class="loop mono" aria-label="The product loop">
+          <li>Proof Block</li><li>Pitch</li><li>Follow-up</li><li>Deal</li><li>Invoice</li>
+        </ol>
+        <figure class="fig">
+          <img src="projects/notebookcrm/cover.jpg" width="913" height="540" alt="notebookCRM Overview screen with a total content views chart" loading="lazy">
+          <figcaption class="mono">The Overview screen brings performance from every connected platform into one view.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">02</p><h2>The problem</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The issue creators describe is not a lack of features. It is the manual work of moving information between tools that don't talk to each other.</p>
+        <blockquote class="pull"><p>“The biggest issue wasn't lack of features it was fragmentation.”</p><cite class="mono">r/influencermarketing</cite></blockquote>
+        <p>Three failures came up repeatedly:</p>
+        <div class="tiles">
+          <article class="tile"><h3>Stats are rebuilt by hand for every brand</h3><p>“Right now I'm just screenshotting my Insights and it looks kind of messy.”</p></article>
+          <article class="tile"><h3>Media kits go out of date</h3><p>“…it is really a struggle to keep the info up to date.” <span class="mono">Canva user</span></p></article>
+          <article class="tile"><h3>Pitches get no follow-up</h3><p>In one audit, 46 of 50 creator pitch emails had no follow-up plan.</p></article>
         </div>
       </div>
-      <object class="pdf" data="projects/notebookcrm/notebookcrm-case-study.pdf#view=FitH" type="application/pdf" aria-label="notebookCRM case study, 9 page PDF">
-        <p class="pdf-fallback">Your browser can't show the PDF here. <a class="u" href="projects/notebookcrm/notebookcrm-case-study.pdf" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
-      </object>
-      <a class="pdf-mobile" href="projects/notebookcrm/notebookcrm-case-study.pdf" target="_blank" rel="noopener"><span>Read the case study</span><small class="mono">PDF · 9 pages · 7 min brew</small><i aria-hidden="true">↗</i></a>
+    </div>
+  </section>
+
+  <section class="cs cs-dark" data-bg="#2A1A14" data-ink="#F3EDE3">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">03</p><h2>Market context</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Brands are projected to spend $32.6B on creators in 2026, and 45.5% of influencer spend is expected to go to micro and nano creators. At the same time, 48.7% of US creators earn under $10,000 a year. The product has to feel and be priced like prosumer software, not an enterprise platform.</p>
+        <dl class="stats">
+          <div><dt>$32.6B</dt><dd>Brand spend on creators, 2026</dd></div>
+          <div><dt>45.5%</dt><dd>Projected share of spend going to micro and nano creators</dd></div>
+          <div><dt>48.7%</dt><dd>US creators earning under $10,000 a year</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">04</p><h2>Who it's for</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">I defined three personas from forum research. The first is the primary user; the other two shaped the pipeline and deal features.</p>
+        <div class="personas">
+          <article class="persona primary">
+            <p class="tag mono">Primary</p>
+            <h3>The mid-tier multi-platform creator</h3>
+            <p>20K to 150K followers on two or three platforms, two to eight brand deals a month, no manager. Wants to look professional to brands without losing a day to admin. Assembles stats by hand whenever a brand asks, and finds that numbers from different platform dashboards don't match.</p>
+            <blockquote>“…a tool, where I would enter my Social Media accounts… and it spits out a one pager with all my numbers, nicely layout and always up to date.”</blockquote>
+          </article>
+          <article class="persona">
+            <h3>The UGC outreach operator</h3>
+            <p>Sells content as a service and needs no audience. Sends cold email at volume, often with a virtual assistant, and stitches together outreach tools, contact-finders and a spreadsheet. Measures outreach like a sales pipeline: deliverability, reply rate, positive replies, calls booked and close rate.</p>
+            <blockquote>“finding the right contacts is honestly the hardest part.”</blockquote>
+          </article>
+          <article class="persona">
+            <h3>The spreadsheet deal tracker</h3>
+            <p>YouTube-first, with occasional deals. Moved from Google Sheets to Notion and linked deals, deliverables and invoices by hand so nothing would be missed.</p>
+            <blockquote>“The biggest upgrade for me was linking deals → deliverables → invoices so nothing slips.”</blockquote>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">05</p><h2>Competitive landscape</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The market splits into two halves that don't meet. Creator-side tools present the creator to brands. Brand-side tools help brands manage creators. Neither supports the creator's own business workflow.</p>
+        <div class="table-wrap" role="region" aria-label="Competitor comparison" tabindex="0">
+          <table class="cmp">
+            <thead><tr><th scope="col">Capability</th><th scope="col">Linktree</th><th scope="col">MediaKits.com</th><th scope="col">Later Influence</th><th scope="col" class="us">notebookCRM</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Built for</th><td>Creators, small businesses</td><td>Creators</td><td>Brands, agencies</td><td class="us">Creators</td></tr>
+              <tr><th scope="row">Media kit</th><td>No</td><td>Yes</td><td>No</td><td class="us">Auto-generated</td></tr>
+              <tr><th scope="row">Cross-platform metrics</th><td>Link clicks only</td><td>Yes</td><td>Brand-facing</td><td class="us">Normalized</td></tr>
+              <tr><th scope="row">Pitch sending and tracking</th><td>No</td><td>No</td><td>Brand-side only</td><td class="us">Yes</td></tr>
+              <tr><th scope="row">Automatic follow-ups</th><td>No</td><td>No</td><td>No</td><td class="us">Yes</td></tr>
+              <tr><th scope="row">Deal pipeline</th><td>No</td><td>No</td><td>Brand-side</td><td class="us">Creator-side</td></tr>
+              <tr><th scope="row">Invoicing</th><td>Product sales only</td><td>Unverified</td><td>Brand-side</td><td class="us">Stripe</td></tr>
+              <tr><th scope="row">Price</th><td>Free to $35/mo</td><td>Unverified</td><td>~$28,500/yr (estimate)</td><td class="us">Prosumer</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Each competitor pointed to a design opportunity:</p>
+        <ul class="notes">
+          <li><b>Linktree</b> has over 70M profiles, but its analytics measure link clicks rather than the creator's business, and reviews complain about billing and cancellation. Transparent billing is an inexpensive way to stand out.</li>
+          <li><b>MediaKits.com</b> is the closest analog. Its founders named pitching as a top frustration but shipped only the analytics half before Viral Nation acquired the company in 2022. The pitching half was never built.</li>
+          <li><b>Later Influence</b> (formerly Mavrck) is strong campaign software built for brands, with no self-serve signup, four to six weeks of onboarding and enterprise pricing. It serves the buyer, not the creator.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">06</p><h2>Design principles</h2></header>
+      <div class="cs-body">
+        <ol class="principles">
+          <li><b>Freshness is visible.</b> Every number shows when it was last synced.</li>
+          <li><b>Averages over outliers.</b> Default to last-10 averages and medians, which brands trust more than a single high-performing post.</li>
+          <li><b>One loop, one place.</b> A creator can go from a stat to a sent pitch to an invoice without leaving the app.</li>
+          <li><b>Least privilege, explained.</b> Ask only for the permissions needed, and explain why in plain language.</li>
+          <li><b>Honest gaps.</b> When a platform doesn't provide data, say so rather than leaving a blank.</li>
+          <li><b>Transparent billing.</b> Clear pricing and one-click cancellation.</li>
+          <li><b>Creator-first tone.</b> Written for the person selling, not the brand buying.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">07</p><h2>The solution</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The product rests on three pillars, each matching one part of the creator's workflow.</p>
+        <article class="pillar">
+          <p class="eyebrow">Pillar 1</p>
+          <h3>Prove: a unified metrics ledger</h3>
+          <p>Creators connect Instagram, TikTok and YouTube once and see normalized views, engagement rate, saves, shares and follower change. Performance is shown as averages and medians over the last 10, 30 and 90 posts. Key numbers become Proof Blocks: small live stat cards that can be dropped into a pitch, media kit or rate card so they never go out of date.</p>
+          <figure class="fig">
+            <img src="projects/notebookcrm/profile.jpg" width="913" height="540" alt="notebookCRM Profile screen with audience, engagement and campaign counts" loading="lazy">
+            <figcaption class="mono">The Profile screen shows connected accounts with sync times, typical performance by platform, audience breakdown, rate card and testimonials.</figcaption>
+          </figure>
+        </article>
+        <article class="pillar">
+          <p class="eyebrow">Pillar 2</p>
+          <h3>Pitch: a two-way pipeline</h3>
+          <p>Creators write and send pitches from their own Gmail and track opens, clicks and replies. Follow-up sequences run on day 1, 4, 10 and 14, each attaching a different Proof Block, and stop when the brand replies. Each brand moves through Pitched, Opened, Replied, Negotiating and Won or Lost. A public profile link lets brands send structured collaboration requests that land in the same pipeline.</p>
+          <ol class="loop mono" aria-label="Pipeline stages"><li>Pitched</li><li>Opened</li><li>Replied</li><li>Negotiating</li><li>Won or Lost</li></ol>
+          <figure class="fig">
+            <img src="projects/notebookcrm/pitching.jpg" width="913" height="540" alt="notebookCRM Pitching screen: brand list beside the pitch email editor" loading="lazy">
+            <figcaption class="mono">The Pitching screen pairs the brand list with the email editor so research and writing happen side by side.</figcaption>
+          </figure>
+        </article>
+        <article class="pillar">
+          <p class="eyebrow">Pillar 3</p>
+          <h3>Get paid: rate card and invoicing</h3>
+          <p>The rate card lists “starting at” prices per deliverable, with bundles and usage rights quoted per campaign. Brands prefer this middle ground: no pricing reads as open to heavy negotiation, while a rigid price sheet locks the creator in. Suggested rates draw on the creator's engagement rate and niche benchmarks. Each won deal links to an invoice and a Stripe payout.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">08</p><h2>Designing around platform constraints</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Platform APIs set firm limits on what the product can show. I reviewed each one and designed the interface to be honest about the gaps.</p>
+        <div class="constraints">
+          <div class="c-row c-head mono" aria-hidden="true"><span>Platform</span><span>Constraint</span><span>Design response</span></div>
+          <div class="c-row"><h3>Instagram</h3><p><span class="c-k mono">Constraint</span>Only Business or Creator accounts can connect. The “impressions” metric is deprecated.</p><p><span class="c-k mono">Design response</span>Check account type at connection, with a guide to upgrade. Label the metric “Views.”</p></div>
+          <div class="c-row"><h3>TikTok</h3><p><span class="c-k mono">Constraint</span>No audience demographics. App approval can take weeks.</p><p><span class="c-k mono">Design response</span>Show “Not available from TikTok” instead of a blank. Cache data and show sync times.</p></div>
+          <div class="c-row"><h3>YouTube</h3><p><span class="c-k mono">Constraint</span>Daily quota of 10,000 units.</p><p><span class="c-k mono">Design response</span>Refresh on a schedule rather than live, with a “last synced” time.</p></div>
+          <div class="c-row"><h3>Gmail</h3><p><span class="c-k mono">Constraint</span>Sending is a sensitive scope; reading mail requires a security assessment.</p><p><span class="c-k mono">Design response</span>Request send-only access and explain why. Detect replies through a tracking reply-to address, with a manual “Mark as replied” option.</p></div>
+          <div class="c-row"><h3>Stripe</h3><p><span class="c-k mono">Constraint</span>Identity checks (KYC) are required for payouts.</p><p><span class="c-k mono">Design response</span>Hand off to Stripe's own onboarding and show payout status in the app.</p></div>
+          <div class="c-row"><h3>Brand contacts</h3><p><span class="c-k mono">Constraint</span>No official source; scraped data is about 70 to 80% accurate.</p><p><span class="c-k mono">Design response</span>Start with manual entry and CSV import. Contact discovery comes later.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">09</p><h2>Visual system</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The interface uses DM Sans throughout, with a lime accent in dark mode and violet in light mode. Navigation is a single sidebar, and an animated indicator moves between screens so the analytics and pitching areas read as one product.</p>
+        <div class="duo">
+          <figure class="fig"><img src="projects/notebookcrm/cover.jpg" width="913" height="540" alt="Overview screen in dark mode with a lime accent" loading="lazy"><figcaption class="mono">Dark mode, lime accent.</figcaption></figure>
+          <figure class="fig"><img src="projects/notebookcrm/light-mode.jpg" width="913" height="540" alt="Overview screen in light mode with a violet accent" loading="lazy"><figcaption class="mono">Light mode switches the accent to violet.</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">10</p><h2>Measuring success</h2></header>
+      <div class="cs-body">
+        <ul class="checks">
+          <li>Time from a brand's request to a sent media kit or pitch</li>
+          <li>Pitch reply rate and positive reply rate</li>
+          <li>Share of pitches that receive at least one follow-up</li>
+          <li>Deals won per month</li>
+          <li>Days from invoice to payment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">11</p><h2>Next steps</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The Overview, Pitching and Profile screens are designed. The media kit, pipeline board, rate card editor and invoicing screens are next. Before committing to the roadmap, I plan to:</p>
+        <ul class="checks">
+          <li>Interview 10 to 15 creators to decide which pillar to lead with.</li>
+          <li>Test the Gmail send-only setup, including reply detection, before building on it.</li>
+          <li>Verify competitor pricing that is currently based on third-party estimates.</li>
+        </ul>
+        <p class="sources">Research sources include public pricing pages, G2, Capterra and Trustpilot reviews, creator communities on Reddit, eMarketer and other 2026 creator economy reports, and official Instagram, TikTok, YouTube, Gmail and Stripe developer documentation. Names and figures in the screens are example data.</p>
+        <p class="doc-actions"><a class="u link-arrow" href="projects/notebookcrm/prototype.html" target="_blank" rel="noopener">Try the prototype <i>↗</i></a><a class="u link-arrow" href="projects/notebookcrm/notebookcrm-case-study.pdf" download>Download the PDF <i>↓</i></a></p>
+      </div>
     </div>
   </section>
 
