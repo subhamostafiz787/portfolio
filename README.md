@@ -33,3 +33,7 @@ The whole line lives in one SVG (`id="line"`) in `index.html`.
 ## Preview locally
 
 Open `index.html` in a browser, or run `python3 -m http.server` in this folder and visit http://localhost:8000.
+
+## After editing styles.css or main.js
+
+Bump the `?v=` number on the `styles.css` and `main.js` links in all three HTML pages so visitors' browsers fetch the new files instead of a cached copy.
