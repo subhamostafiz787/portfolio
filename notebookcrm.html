@@ -217,7 +217,27 @@
 
   <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
     <div class="wrap cs-grid">
-      <header class="cs-label"><p class="eyebrow">08</p><h2>Designing around platform constraints</h2></header>
+      <header class="cs-label"><p class="eyebrow">08</p><h2>The logic map</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Before laying out a single screen, I mapped the core creator loop and the system behind it as node diagrams in Flowstep. Every screen in the prototype traces back to a node here.</p>
+        <p>The maps use the product's working name, Pitching Hub. The first follows one creator through five stages, from spotting a low-engagement post to a sent pitch, and pairs each creator action with the UI it needs and the system change it triggers. The second breaks that loop into layers: the screens, the services behind them, the data and events they write, the platform APIs they depend on, and the guardrails from the design principles.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/notebookcrm/logic-loop.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/notebookcrm/logic-loop.png" width="3840" height="2224" alt="Flowstep node diagram of the core creator loop: five stages from Review low engagement to Sent / Pending reply, each split into creator actions, product UI and system changes" loading="lazy"></a>
+        <figcaption class="mono"><span>Core creator loop: stages, creator actions, product UI and system changes, with the success criterion “one loop, one place.”</span><a class="u link-arrow" href="projects/notebookcrm/logic-loop.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+      <figure class="fig fig-wide">
+        <a href="projects/notebookcrm/logic-architecture.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/notebookcrm/logic-architecture.png" width="3840" height="2338" alt="Flowstep system architecture map with experience layer, application services, data and event layer, external integrations and guardrails, plus explicit flow connections and the data contract" loading="lazy"></a>
+        <figcaption class="mono"><span>System architecture: each screen's services, entities and events, the API limits it designs around, and the guardrails.</span><a class="u link-arrow" href="projects/notebookcrm/logic-architecture.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">09</p><h2>Designing around platform constraints</h2></header>
       <div class="cs-body">
         <p class="cs-lead">Platform APIs set firm limits on what the product can show. I reviewed each one and designed the interface to be honest about the gaps.</p>
         <div class="constraints">
@@ -233,9 +253,9 @@
     </div>
   </section>
 
-  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
     <div class="wrap cs-grid">
-      <header class="cs-label"><p class="eyebrow">09</p><h2>Visual system</h2></header>
+      <header class="cs-label"><p class="eyebrow">10</p><h2>Visual system</h2></header>
       <div class="cs-body">
         <p class="cs-lead">The interface uses DM Sans throughout, with a lime accent in dark mode and violet in light mode. Navigation is a single sidebar, and an animated indicator moves between screens so the analytics and pitching areas read as one product.</p>
         <div class="duo">
@@ -246,9 +266,9 @@
     </div>
   </section>
 
-  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
     <div class="wrap cs-grid">
-      <header class="cs-label"><p class="eyebrow">10</p><h2>Measuring success</h2></header>
+      <header class="cs-label"><p class="eyebrow">11</p><h2>Measuring success</h2></header>
       <div class="cs-body">
         <ul class="checks">
           <li>Time from a brand's request to a sent media kit or pitch</li>
@@ -261,9 +281,9 @@
     </div>
   </section>
 
-  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
     <div class="wrap cs-grid">
-      <header class="cs-label"><p class="eyebrow">11</p><h2>Next steps</h2></header>
+      <header class="cs-label"><p class="eyebrow">12</p><h2>Next steps</h2></header>
       <div class="cs-body">
         <p class="cs-lead">The Overview, Pitching and Profile screens are designed. The media kit, pipeline board, rate card editor and invoicing screens are next. Before committing to the roadmap, I plan to:</p>
         <ul class="checks">
