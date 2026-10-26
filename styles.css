@@ -146,6 +146,8 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .cursor.big-c{width:76px;height:76px;margin:-38px 0 0 -38px}
 .cursor.big-c span{opacity:1}
 @media (hover:hover) and (pointer:fine){.cursor{opacity:1}}
+.has-cursor,.has-cursor *{cursor:none !important}
+.cursor.out{opacity:0}
 
 /* GSAP mode */
 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}

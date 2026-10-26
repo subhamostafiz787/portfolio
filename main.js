@@ -264,10 +264,13 @@
   /* ---------- cursor ---------- */
   var cursor = $('.cursor');
   if (cursor && fine && !reduce) {
+    // the dot replaces the system pointer; it hides again when the mouse leaves the window
+    document.documentElement.classList.add('has-cursor');
     var mx = -100, my = -100, cx = -100, cy = -100;
-    window.addEventListener('pointermove', function (e) { mx = e.clientX; my = e.clientY; });
+    window.addEventListener('pointermove', function (e) { mx = e.clientX; my = e.clientY; cursor.classList.remove('out'); });
+    document.addEventListener('mouseleave', function () { cursor.classList.add('out'); });
     (function follow() {
-      cx += (mx - cx) * 0.2; cy += (my - cy) * 0.2;
+      cx += (mx - cx) * 0.35; cy += (my - cy) * 0.35;
       cursor.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
       requestAnimationFrame(follow);
     })();
