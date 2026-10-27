@@ -65,7 +65,7 @@ button{font:inherit;color:inherit}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--stage-bg, var(--cream));color:var(--stage-ink, var(--espresso));display:grid;grid-template-rows:1fr auto auto;padding-top:calc(88px + env(safe-area-inset-top, 0px))}
 .stage>.wrap{width:100%}
 .chapters{position:relative;min-height:0}
-.chapter{position:absolute;inset:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:20px 48px;align-content:start;padding-top:clamp(12px,5vh,64px);opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.chapter{position:absolute;inset:0 max(var(--pad), env(safe-area-inset-right, 0px)) 0 max(var(--pad), env(safe-area-inset-left, 0px));display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:20px 48px;align-content:start;padding-top:clamp(12px,5vh,64px);opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.8,.2,1);pointer-events:none}
 .chapter.on{opacity:1;transform:none}
 .chapter h2{margin:14px 0 0;font-size:clamp(38px,5.4vw,80px);line-height:1;letter-spacing:-.04em;font-weight:500;text-wrap:balance}
 .chapter p.body{margin:0;max-width:40ch;font-size:clamp(17px,1.55vw,21px);line-height:1.5;font-weight:350;text-wrap:pretty;padding-top:clamp(0px,3vh,40px)}
