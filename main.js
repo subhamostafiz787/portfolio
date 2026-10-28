@@ -261,6 +261,15 @@
     } catch (e) { selectAddr(); done('Selected, press copy'); }
   });
 
+  /* ---------- moka pots: on touch screens, the burner lights as each pot scrolls into view ---------- */
+  var pots = $$('.stove .card');
+  if (pots.length && !fine && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.closest('.card').classList.toggle('lit', en.intersectionRatio > 0.6); });
+    }, { threshold: [0, 0.6, 1] });
+    pots.forEach(function (p) { io.observe(p.querySelector('.moka')); });
+  }
+
   /* ---------- cursor ---------- */
   var cursor = $('.cursor');
   if (cursor && fine && !reduce) {
@@ -283,6 +292,19 @@
   /* ---------- motion extras ---------- */
   if (G) {
     if ($('.hero')) gsap.from('.hero .eyebrow, .hero .lede, .hero-foot', { opacity: 0, y: 24, duration: 0.9, stagger: 0.12, delay: 0.35, ease: 'power3.out' });
+    // hero portrait: revealed top to bottom like ink filling in, after the headline lands
+    var portrait = $('.hero-portrait .portrait');
+    if (portrait) {
+      gsap.fromTo(portrait, { clipPath: 'inset(0% 0% 100% 0%)', y: 16 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 1.9, ease: 'power2.inOut', delay: 0.6 });
+      // a little depth: the drawing drifts against the cursor
+      if (fine) {
+        var px = gsap.quickTo('.hero-portrait', 'x', { duration: 1.2, ease: 'power3' }), py = gsap.quickTo('.hero-portrait', 'y', { duration: 1.2, ease: 'power3' });
+        window.addEventListener('pointermove', function (e) {
+          if (window.scrollY > window.innerHeight) return;
+          px((e.clientX / window.innerWidth - 0.5) * -14); py((e.clientY / window.innerHeight - 0.5) * -10);
+        });
+      }
+    }
     if (halo) gsap.to(halo, { attr: { r: 20 }, duration: 0.9, repeat: -1, yoyo: true, ease: 'sine.inOut' });
 
     // work page title: words rise in
@@ -298,6 +320,7 @@
       gsap.from(el, { y: 70, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
     });
     gsap.utils.toArray('.card').forEach(function (card) {
+      if (!card.querySelector('.cover .num')) return;
       gsap.fromTo(card.querySelector('.num'), { yPercent: -40 }, { yPercent: 60, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } });
     });
     // the big menu link slides across as you scroll past
