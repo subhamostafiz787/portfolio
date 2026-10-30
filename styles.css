@@ -176,43 +176,6 @@ a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-
 .wipe{position:fixed;inset:0;z-index:100;background:var(--cherry);color:var(--cream);display:grid;place-items:center;transform:translateY(100%);pointer-events:none}
 .wipe span{font-family:var(--f-hand);font-size:clamp(36px,5vw,64px)}
 
-/* WORK PAGE: moka pots on the stove */
-.menu.stove{position:relative;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:56px 24px;border:1.5px solid var(--espresso);padding:76px clamp(16px,3vw,40px) 64px;
-  background:
-    linear-gradient(var(--espresso),var(--espresso)) 0 40px/100% 1.5px no-repeat,
-    linear-gradient(var(--espresso),var(--espresso)) 0 calc(100% - 40px)/100% 1.5px no-repeat,
-    repeating-linear-gradient(90deg,transparent 0 71px,rgba(92,101,50,.13) 71px 72.5px),
-    repeating-linear-gradient(0deg,transparent 0 35px,rgba(92,101,50,.13) 35px 36.5px),
-    var(--cream)}
-.menu.stove::before,.menu.stove::after{content:"";position:absolute;left:0;right:0;height:40px;pointer-events:none;
-  background:
-    linear-gradient(var(--espresso),var(--espresso)) 16.6% 50%/10px 10px no-repeat,
-    linear-gradient(var(--espresso),var(--espresso)) 50% 50%/10px 10px no-repeat,
-    linear-gradient(var(--espresso),var(--espresso)) 83.4% 50%/10px 10px no-repeat,
-    var(--cream)}
-.menu.stove::before{top:0}
-.menu.stove::after{bottom:0}
-.stove .card,.stove .card:first-child{grid-column:auto;align-items:center;text-align:center;gap:20px}
-.moka{position:relative;width:100%;max-width:340px;aspect-ratio:400/560;margin-inline:auto}
-.moka-art{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.moka-art path,.moka-art circle,.moka-art ellipse{fill:none;stroke:var(--espresso);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
-.moka-art .fill{fill:var(--cream)}
-.moka-art .lid{transform-box:view-box;transform-origin:310px 104px;transition:transform .7s cubic-bezier(.3,1.6,.5,1)}
-.moka-art .flames path{fill:var(--steam);stroke:var(--accent);stroke-width:1.4;transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
-.moka-art .flames path:nth-child(odd){transition-delay:.05s}
-.moka-art .steam path{stroke-dasharray:80;stroke-dashoffset:80;opacity:0;transition:stroke-dashoffset 1s .25s ease,opacity .4s .25s}
-.moka-window{position:absolute;left:26.5%;top:21.786%;width:47%;height:30%;background:var(--tint);clip-path:polygon(0 0,100% 0,90.43% 100%,9.57% 100%);display:grid;place-items:center;overflow:hidden}
-.moka-window img,.moka-window video{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.moka-window .ph{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:8px;text-align:center;color:var(--espresso);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.moka-num{position:absolute;left:50%;top:70.5%;transform:translate(-50%,-50%) rotate(-4deg);font-family:var(--f-hand);font-size:clamp(28px,3vw,40px);line-height:1;color:var(--accent)}
-.card:hover .moka-art .lid,.card:focus-visible .moka-art .lid,.card.lit .moka-art .lid{transform:rotate(-9deg)}
-.card:hover .moka-art .flames path,.card:focus-visible .moka-art .flames path,.card.lit .moka-art .flames path{transform:scaleY(1)}
-.card:hover .moka-art .steam path,.card:focus-visible .moka-art .steam path,.card.lit .moka-art .steam path{stroke-dashoffset:0;opacity:1;animation:waft 2.6s ease-in-out infinite}
-.card:hover .moka-window img,.card:hover .moka-window video,.card:hover .moka-window .ph{transform:scale(1.06)}
-.card-text{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:36ch}
-.card-text .meta{gap:14px;justify-content:center;flex-wrap:wrap;opacity:.85}
-
-
 /* HERO PORTRAIT: your line drawing on the right of the hero */
 @media (min-width:901px){
   .hero .wrap{position:relative;min-height:clamp(560px,58vw,800px)}
@@ -232,6 +195,8 @@ a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-
 }
 
 /* CASE STUDY: work card with a screenshot cover, and the case study page */
+.cover-shot img{position:absolute;left:14%;top:24%;width:92%;height:auto;border-radius:14px 0 0 0;box-shadow:0 18px 44px rgba(42,26,20,.28);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .cover-shot img,.card:focus-visible .cover-shot img{transform:translate(-10px,-10px)}
 .page-case .work{padding-bottom:clamp(64px,8vw,112px)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px 32px;margin:0 0 clamp(40px,5vw,64px);padding-top:24px;border-top:1.5px solid var(--espresso)}
 .facts dt{text-transform:uppercase;letter-spacing:.14em;opacity:.65;margin-bottom:6px}

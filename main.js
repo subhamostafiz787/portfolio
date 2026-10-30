@@ -261,15 +261,6 @@
     } catch (e) { selectAddr(); done('Selected, press copy'); }
   });
 
-  /* ---------- moka pots: on touch screens, the burner lights as each pot scrolls into view ---------- */
-  var pots = $$('.stove .card');
-  if (pots.length && !fine && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { en.target.closest('.card').classList.toggle('lit', en.intersectionRatio > 0.6); });
-    }, { threshold: [0, 0.6, 1] });
-    pots.forEach(function (p) { io.observe(p.querySelector('.moka')); });
-  }
-
   /* ---------- cursor ---------- */
   var cursor = $('.cursor');
   if (cursor && fine && !reduce) {
@@ -320,7 +311,6 @@
       gsap.from(el, { y: 70, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
     });
     gsap.utils.toArray('.card').forEach(function (card) {
-      if (!card.querySelector('.cover .num')) return;
       gsap.fromTo(card.querySelector('.num'), { yPercent: -40 }, { yPercent: 60, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } });
     });
     // the big menu link slides across as you scroll past
