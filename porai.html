@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>porAI · Subha Mostafiz</title>
+<meta name="description" content="Case study: porAI. Designing an AI teacher for Bangladeshi students and teachers who own smartphones but have never learned to write a prompt.">
+<meta property="og:title" content="porAI · Case study by Subha Mostafiz">
+<meta property="og:description" content="Designing an AI teacher for Bangladeshi students and teachers who own smartphones but have never learned to write a prompt.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='11' ry='8' transform='rotate(-25 16 16)' fill='%232B1E17'/%3E%3Cpath d='M8 20 C13 16 18 15 24 11' stroke='%23F7F2EA' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261101c">
+</head>
+<body class="page-work page-case">
+<div class="cursor" aria-hidden="true"><span>sip</span></div>
+<div class="wipe" aria-hidden="true"><span>brewing…</span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Home"><span>s</span><span>u</span><span>b</span><span>r</span><span>e</span><span>w</span><span>s</span><span>_</span><span style="color:var(--steam)">.</span><span>c</span><span>o</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li class="hide-sm"><a href="index.html#story">Story</a></li>
+        <li><a href="work.html">Work<sup>05</sup></a></li>
+        <li class="hide-sm"><a href="#resume">Resume ↗</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="mug" aria-hidden="true">
+          <svg viewBox="0 0 22 22"><clipPath id="mugclip"><path d="M3.8 5.8 H15.2 V17 Q15.2 19.2 13 19.2 H6 Q3.8 19.2 3.8 17 Z"></path></clipPath><rect class="fill" id="mugfill" x="0" y="20" width="22" height="20" clip-path="url(#mugclip)"></rect><path d="M3 5 H16 V17 Q16 20 13 20 H6 Q3 20 3 17 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path><path d="M16 8 Q20 8 20 11.5 Q20 15 16 15" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>
+          <span><span id="brewpct">0%</span><span class="hide-sm"> brewed</span></span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="work case" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">03 · Case study · EdTech</p><h1 class="page-title">porAI</h1><p class="tagline"><span class="bn" lang="bn">তোমার এআই শিক্ষক</span> · “your AI teacher”</p></div>
+        <p>Designing an AI teacher for Bangladeshi students and teachers who own smartphones but have never learned to write a prompt.</p>
+      </div>
+      <dl class="facts mono">
+        <div><dt>Role</dt><dd>Co-founder<br>Product &amp; UX design</dd></div>
+        <div><dt>Team</dt><dd>Serat Saad, Subha Mostafiz<br>Advised by Prof. Yuan-Sen Ting &amp; Prof. Saleh Tanveer (Ohio State)</dd></div>
+        <div><dt>Timeline</dt><dd>Jan 2026 – present</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Streamlit, Python<br>Field survey, interviews</dd></div>
+      </dl>
+
+      <a class="proto proto-live" href="https://por-ai.com" target="_blank" rel="noopener" data-cursor="try">
+        <div class="proto-copy">
+          <p class="eyebrow">Live beta</p>
+          <h2>See it running at <span class="nb">por-ai.com</span>.</h2>
+          <p>porAI is live for grades 3–12 on the NCTB curriculum, in Bangla and English. It opens in a new tab.</p>
+          <span class="proto-btn">Visit por-ai.com <i aria-hidden="true">↗</i></span>
+        </div>
+        <div class="proto-phones"><img src="projects/porai/hero-phones.png" width="1200" height="1680" alt="Two porAI phone screens: the Bangla student home and the teacher question generator" loading="lazy"></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">01</p><h2>Overview</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Students have phones. What they don't have is a way in.</p>
+        <p>porAI is an AI teacher for Bangladeshi students in grades 3–12, built on the national (NCTB) curriculum, in Bangla and English. Students can photograph a problem from their textbook, or ask by voice, and get a step-by-step answer at their level. Teachers can generate unlimited exam-style questions, with equations, figures and an answer key, by picking a chapter instead of writing a prompt.</p>
+        <p>I co-founded porAI and led the product and UX work: field research, personas, flows, wireframes and the visual design, alongside our working Streamlit prototype.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">02</p><h2>The problem</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">A test-prep system that recycles the same guidebooks, and AI tools that only work if you speak “prompt”.</p>
+        <p>In much of Bangladesh, teachers build class tests from the same few guidebooks every term, so students memorise answers instead of learning concepts. Families who can afford it pay for private tutors; many can't afford one for every subject.</p>
+        <p>Generic chatbots look like the answer, but they assume the user knows what to type, they default to English, and they don't know which chapter of which NCTB book a student is on. Equations and diagrams, the heart of science exams, come out unreliable or missing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs cs-dark" data-bg="#2A1A14" data-ink="#F3EDE3">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">03</p><h2>Research</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">We started in classrooms, not in Figma.</p>
+        <p>We surveyed students in four schools, including village schools, and talked with teachers about how they prepare tests. I also leaned on something I grew up with: my family includes a retired high-school teacher, so the rhythm of exam season was familiar long before this project.</p>
+        <dl class="stats">
+          <div><dt>300+</dt><dd>students surveyed across 4 schools</dd></div>
+          <div><dt>91%</dt><dd>were interested in paying for it at under <span class="bn">৳</span>1,000</dd></div>
+          <div><dt>0</dt><dd>prompts a user should ever have to write</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">04</p><h2>What we heard</h2></header>
+      <div class="cs-body">
+        <div class="tiles insights">
+          <article class="tile"><p class="eyebrow">Insight 01</p><h3>Phones aren't the barrier; prompting is.</h3><p>Students in villages had smartphones. They just didn't know what to ask a chatbot, or how.</p></article>
+          <article class="tile"><p class="eyebrow">Insight 02</p><h3>Teachers were the most eager users.</h3><p>Setting a fresh test with figures and an answer key takes an evening. Anything that gives that evening back gets attention.</p></article>
+          <article class="tile"><p class="eyebrow">Insight 03</p><h3>Parents decide, students use.</h3><p>Paying for tutors is normal, and parents make that call. A trial aimed at parents and teachers made more sense than marketing to students.</p></article>
+          <article class="tile"><p class="eyebrow">Insight 04</p><h3>The textbook is the mental model.</h3><p>Everyone navigates by class → subject → chapter. Our interface should too.</p></article>
+        </div>
+        <blockquote class="pull small"><p>How might we let a student get unstuck on a textbook problem without typing a single prompt?</p></blockquote>
+        <blockquote class="pull small"><p>How might we turn a teacher's evening of test-writing into a few taps?</p></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">05</p><h2>Personas</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Three people, one phone.</p>
+        <p>Proto-personas built from the survey and teacher conversations. Rafi uses porAI, Nasrin teaches with it, and Abdul decides whether the family pays for it.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <div class="tabs" role="tablist" aria-label="Personas">
+        <button type="button" role="tab" aria-selected="true" aria-controls="p1" id="t1">Rafi · Student</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Nasrin · Teacher</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Abdul · Parent</button>
+      </div>
+      <figure class="fig persona-fig" id="p1" role="tabpanel" aria-labelledby="t1"><a href="projects/porai/persona-student.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/persona-student.png" width="2800" height="1720" alt="Persona: Rafi, Class 8 student in a rural upazila" loading="lazy"></a></figure>
+      <figure class="fig persona-fig" id="p2" role="tabpanel" aria-labelledby="t2" hidden><a href="projects/porai/persona-teacher.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/persona-teacher.png" width="2800" height="1720" alt="Persona: Nasrin Akter, secondary science teacher" loading="lazy"></a></figure>
+      <figure class="fig persona-fig" id="p3" role="tabpanel" aria-labelledby="t3" hidden><a href="projects/porai/persona-parent.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/persona-parent.png" width="2800" height="1720" alt="Persona: Abdul Karim, parent and decision-maker" loading="lazy"></a></figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">06</p><h2>Journey map</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Where a teacher's evening goes.</p>
+        <p>Mapping Nasrin's test-writing routine showed the low point clearly: drawing figures and working out the answer key by hand. That became the feature we had to get right first.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/porai/journey-map.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/journey-map.png" width="3400" height="2000" alt="Journey map of a teacher setting a class test, with pain points and porAI opportunities per stage" loading="lazy"></a>
+        <figcaption class="mono"><span>A teacher setting a class test: pain points and porAI opportunities per stage.</span><a class="u link-arrow" href="projects/porai/journey-map.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">07</p><h2>Design principles</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Five rules we didn't break.</p>
+        <ol class="principles">
+          <li><b>Choose, don't type</b> Every AI request is built from taps. The text box is optional.</li>
+          <li><b>The book is the menu</b> Class → subject → chapter → topic, exactly like the NCTB textbook.</li>
+          <li><b>Bangla first</b> Bangla labels lead, English sits beside. Switch any time.</li>
+          <li><b>Show the work</b> Answers come as steps with real equations, never a single line.</li>
+          <li><b>Built for a shared phone</b> Low-end Android, patchy data, several users per device.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">08</p><h2>User flow</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">One door, two paths.</p>
+        <p>Onboarding asks one question that matters, who you are, and sends students and teachers to home screens built for what they came to do.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/porai/user-flow.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/user-flow.png" width="3400" height="1800" alt="User flow: onboarding splits into a student path (type, speak or snap a question, get a step-by-step answer) and a teacher path (choose chapter, difficulty and type, generate, export PDF)" loading="lazy"></a>
+        <figcaption class="mono"><span>Onboarding splits into a student path and a teacher path.</span><a class="u link-arrow" href="projects/porai/user-flow.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">09</p><h2>Wireframes</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Structure before style.</p>
+        <p>Our first working version was a Streamlit prototype: great for proving the AI, but built around a chat box, the very thing users told us they couldn't use. The wireframes moved every core action out of the text field and into buttons, chips and menus.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/porai/wireframes-lofi.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/wireframes-lofi.png" width="3400" height="2000" alt="Five lo-fi wireframes: onboarding, student home, snap and ask, question generator, test preview" loading="lazy"></a>
+        <figcaption class="mono"><span>Onboarding, student home, snap and ask, question generator, test preview.</span><a class="u link-arrow" href="projects/porai/wireframes-lofi.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">10</p><h2>Key decisions</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">What we chose, and what it cost.</p>
+        <article class="pillar"><h3>Camera as the main action</h3><p>Most student questions start on a printed page, so “snap a photo” is the largest button on the home screen, ahead of typing.</p><p class="tradeoff">Trade-off: image questions cost more to process than text, and blurry photos need a graceful retry.</p></article>
+        <article class="pillar"><h3>Chips instead of a prompt box for teachers</h3><p>The generator is a set of syllabus menus and chips. A teacher can't write a bad prompt because she never writes one.</p><p class="tradeoff">Trade-off: less flexibility for power users, so a free-text field may come back later as an advanced option.</p></article>
+        <article class="pillar"><h3>Regenerate one question, not the whole test</h3><p>Teachers liked most of a generated test but wanted to swap one or two items. Each question gets its own regenerate button.</p><p class="tradeoff">Trade-off: more AI calls per test, but far less frustration.</p></article>
+        <article class="pillar"><h3>Print-ready PDF as the finish line</h3><p>Tests in Bangladeshi classrooms are on paper. The flow ends in a PDF with a separate answer key, not a share link.</p><p class="tradeoff">Trade-off: layout work for equations and figures in Bangla documents.</p></article>
+        <article class="pillar"><h3>“Explain simpler” in one tap</h3><p>Instead of asking students to rephrase, one button re-answers at a lower level, with more steps and simpler words.</p><p class="tradeoff">Trade-off: we need a reliable sense of “level” per class, which the curriculum structure gives us.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">11</p><h2>Visual design</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Exercise-book paper, the flag's green, a red-pen accent.</p>
+        <p>The palette borrows from what students already associate with school: off-white khata paper, the green of the flag, and the red pen a teacher marks with. The red is reserved for one main action per screen. Hind Siliguri carries Bangla and Latin in one family, so mixed-language screens stay even.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/porai/screens-hifi.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/screens-hifi.png" width="3400" height="2000" alt="Five high-fidelity porAI screens in Bangla" loading="lazy"></a>
+        <figcaption class="mono"><span>Hi-fi design proposal. The live beta may look different.</span><a class="u link-arrow" href="projects/porai/screens-hifi.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+      <div class="phones5">
+        <figure class="fig phone"><img src="projects/porai/screen-onboarding.png" width="800" height="1440" alt="Onboarding screen" loading="lazy"><figcaption class="mono">Onboarding</figcaption></figure>
+        <figure class="fig phone"><img src="projects/porai/screen-student-home.png" width="800" height="1440" alt="Student home screen" loading="lazy"><figcaption class="mono">Student home</figcaption></figure>
+        <figure class="fig phone"><img src="projects/porai/screen-snap-ask.png" width="800" height="1440" alt="Snap and ask answer screen" loading="lazy"><figcaption class="mono">Snap &amp; ask</figcaption></figure>
+        <figure class="fig phone"><img src="projects/porai/screen-question-generator.png" width="800" height="1440" alt="Teacher question generator" loading="lazy"><figcaption class="mono">Generator</figcaption></figure>
+        <figure class="fig phone"><img src="projects/porai/screen-test-preview.png" width="800" height="1440" alt="Generated test preview" loading="lazy"><figcaption class="mono">Test preview</figcaption></figure>
+      </div>
+      <figure class="fig fig-wide">
+        <a href="projects/porai/style-guide.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/porai/style-guide.png" width="3400" height="2000" alt="porAI UI style guide: colors, type, components and spacing" loading="lazy"></a>
+        <figcaption class="mono"><span>Style guide: colors, type, components and spacing.</span><a class="u link-arrow" href="projects/porai/style-guide.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">12</p><h2>Outcome</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">From survey to a live beta.</p>
+        <ul class="checks">
+          <li>Live beta at <a class="u" href="https://por-ai.com" target="_blank" rel="noopener">por-ai.com</a>, grades 3–12, NCTB curriculum.</li>
+          <li>Selected for the Hult Prize 2026 national round.</li>
+          <li>School pilot planned at MCCGPS, Bangladesh, with 300+ students and their teachers.</li>
+        </ul>
+        <h3>What I'd measure next</h3>
+        <p>Time for a teacher to produce a printable test, share of student questions that start from a photo, and how often “explain simpler” is tapped, a signal of whether answers are pitched at the right level.</p>
+        <h3>What I learned</h3>
+        <p>The hardest design problem in an AI product wasn't the AI. It was removing the blank text box. Every time we replaced typing with choosing, the people we were designing for got further on their own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-cta alt" data-bg="#5C6532" data-ink="#F3EDE3">
+    <div class="wrap">
+      <p class="eyebrow">Still thirsty?</p>
+      <a class="cta-big" href="work.html" data-cursor="more"><span class="cta-text">Back to the menu</span><i aria-hidden="true">←</i></a>
+      <p class="cta-note">Or <a class="u" href="index.html#contact">order a coffee chat</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="resume" data-bg="#2A1A14" data-ink="#F3EDE3">
+  <div class="wrap">
+    <div class="top">
+      <span class="big" aria-label="subrews_.co"><span>sub</span><span>rews</span><span>_</span><span><span style="color:var(--steam)">.</span>co</span></span>
+      <ul>
+        <li><a class="link-arrow" href="#resume">Resume <i>↗</i></a></li>
+        <li><a class="link-arrow" href="https://linkedin.com/in/subha-mostafiz" target="_blank" rel="noopener">LinkedIn <i>↗</i></a></li>
+        <li><a class="link-arrow" href="index.html#contact">Email <i>↗</i></a></li>
+      </ul>
+    </div>
+    <div class="bottom mono">
+      <span>Brewed by hand by a nomad · © 2026</span>
+      <a href="index.html">Back to the beans ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js?v=20261101c"></script>
+</body>
+</html>

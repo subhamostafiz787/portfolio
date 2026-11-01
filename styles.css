@@ -202,6 +202,9 @@ a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-
 .cover-phones img:nth-of-type(2){left:67%;top:25%}
 .card:hover .cover-phones img:nth-of-type(1),.card:focus-visible .cover-phones img:nth-of-type(1){transform:translateY(-10px)}
 .card:hover .cover-phones img:nth-of-type(2),.card:focus-visible .cover-phones img:nth-of-type(2){transform:translateY(-16px)}
+.cover-full img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .cover-full img,.card:focus-visible .cover-full img{transform:scale(1.03)}
+.cover-full .num{color:var(--cream);z-index:1}
 .page-case .work{padding-bottom:clamp(64px,8vw,112px)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px 32px;margin:0 0 clamp(40px,5vw,64px);padding-top:24px;border-top:1.5px solid var(--espresso)}
 .facts dt{text-transform:uppercase;letter-spacing:.14em;opacity:.65;margin-bottom:6px}
@@ -312,3 +315,23 @@ a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-
 .phones3 .fig{margin:0}
 @media (max-width:640px){.anno{grid-template-columns:1fr}.anno .fig{max-width:260px}}
 .process b{font-size:19px}
+.bn{font-family:'Hind Siliguri',var(--f-display)}
+.tagline{margin-top:12px !important;font-size:clamp(18px,1.7vw,24px)}
+.proto-live{background:#6B1E2A}
+.proto-live .proto-phones{height:clamp(300px,34vw,470px)}
+.proto-live .proto-phones img{width:min(100%,440px);border-radius:0}
+.tiles.insights{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+.tiles.insights p:not(.eyebrow){font-style:normal}
+.tile .eyebrow{color:var(--accent);font-style:normal}
+.pull.small p{font-size:clamp(22px,2.3vw,32px);line-height:1.15}
+.tabs{display:flex;flex-wrap:wrap;gap:10px}
+.tabs button{min-height:44px;padding:10px 20px;border-radius:999px;border:1.5px solid var(--espresso);background:transparent;font-size:15px;transition:background .25s,color .25s}
+.tabs button[aria-selected="true"]{background:var(--espresso);color:var(--cream)}
+.cs-figs:has(.tabs){gap:20px}
+.persona-fig{margin:0}
+.phones5{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:20px}
+.phones5 .fig{margin:0}
+.pillar .tradeoff{font-size:16px;opacity:.75}
+.cs-body > h3{margin:16px 0 -12px;font-size:clamp(22px,2vw,28px);line-height:1.15;letter-spacing:-.025em;font-weight:500}
+.nb{white-space:nowrap}
+.persona-fig a{display:block}

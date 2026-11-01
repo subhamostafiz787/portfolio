@@ -39,7 +39,7 @@
   if (G && wipe) {
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute('href');
-      if (!/^(index|work|notebookcrm|closet-allocation)\.html/.test(href)) return;
+      if (!/^(index|work|notebookcrm|closet-allocation|porai)\.html/.test(href)) return;
       var samePage = href.split('#')[0] === (location.pathname.split('/').pop() || 'index.html');
       if (samePage) return;
       a.addEventListener('click', function (e) {
@@ -259,6 +259,26 @@
     try {
       navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { selectAddr(); done('Selected, press copy'); });
     } catch (e) { selectAddr(); done('Selected, press copy'); }
+  });
+
+  /* ---------- tabs (case study personas) ---------- */
+  var tabs = $$('[role="tab"]');
+  function pick(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { pick(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!step) return;
+      var next = tabs[(i + step + tabs.length) % tabs.length];
+      pick(next); next.focus();
+    });
   });
 
   /* ---------- cursor ---------- */
