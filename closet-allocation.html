@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Closet Allocation · Subha Mostafiz</title>
+<meta name="description" content="Case study: Closet Allocation, one considered outfit each morning, chosen from your own wardrobe around the day's weather and calendar.">
+<meta property="og:title" content="Closet Allocation · Case study by Subha Mostafiz">
+<meta property="og:description" content="One considered outfit each morning, chosen from your own wardrobe around the day's weather and calendar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='11' ry='8' transform='rotate(-25 16 16)' fill='%232B1E17'/%3E%3Cpath d='M8 20 C13 16 18 15 24 11' stroke='%23F7F2EA' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261031a">
+</head>
+<body class="page-work page-case">
+<div class="cursor" aria-hidden="true"><span>sip</span></div>
+<div class="wipe" aria-hidden="true"><span>brewing…</span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Home"><span>s</span><span>u</span><span>b</span><span>r</span><span>e</span><span>w</span><span>s</span><span>_</span><span style="color:var(--steam)">.</span><span>c</span><span>o</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li class="hide-sm"><a href="index.html#story">Story</a></li>
+        <li><a href="work.html">Work<sup>05</sup></a></li>
+        <li class="hide-sm"><a href="#resume">Resume ↗</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="mug" aria-hidden="true">
+          <svg viewBox="0 0 22 22"><clipPath id="mugclip"><path d="M3.8 5.8 H15.2 V17 Q15.2 19.2 13 19.2 H6 Q3.8 19.2 3.8 17 Z"></path></clipPath><rect class="fill" id="mugfill" x="0" y="20" width="22" height="20" clip-path="url(#mugclip)"></rect><path d="M3 5 H16 V17 Q16 20 13 20 H6 Q3 20 3 17 Z" fill="none" stroke="currentColor" stroke-width="1.6"></path><path d="M16 8 Q20 8 20 11.5 Q20 15 16 15" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>
+          <span><span id="brewpct">0%</span><span class="hide-sm"> brewed</span></span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="work case" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">04 · Case study</p><h1 class="page-title">Closet Allocation</h1></div>
+        <p>One considered outfit each morning, chosen from your own wardrobe around the day's weather and calendar.</p>
+      </div>
+      <dl class="facts mono">
+        <div><dt>Designer</dt><dd>Subha Mostafiz</dd></div>
+        <div><dt>Type</dt><dd>Student concept project</dd></div>
+        <div><dt>Timeline</dt><dd>2–4 weeks</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Figma Make, Claude, React, Tailwind</dd></div>
+      </dl>
+
+      <a class="proto" href="projects/closet-allocation/prototype.html" target="_blank" rel="noopener" data-cursor="try">
+        <div class="proto-copy">
+          <p class="eyebrow">Interactive prototype</p>
+          <h2>Confirm it, or swap it.</h2>
+          <p>Two complete looks with working Swap and Confirm states. It opens in a new tab.</p>
+          <span class="proto-btn">Open the prototype <i aria-hidden="true">↗</i></span>
+        </div>
+        <div class="proto-phones">
+          <img src="projects/closet-allocation/look-01.jpg" width="911" height="1720" alt="Closet Allocation, Look 01" loading="lazy">
+          <img src="projects/closet-allocation/confirmed.jpg" width="911" height="1720" alt="Closet Allocation, Look 02 confirmed" loading="lazy">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">01</p><h2>The problem</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Getting dressed costs 10–15 minutes of attention, every day.</p>
+        <p>As life gets busier, choosing clothes becomes one more decision stacked onto the start of the day. It is a problem for everyone: standing in front of a full wardrobe, checking the weather, remembering what the day holds, and trying to put together something that works. The effort is small but it repeats every morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">02</p><h2>The goal</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Turn an open-ended choice into a single yes or no.</p>
+        <p>Instead of browsing a wardrobe, the user is handed one complete outfit that already accounts for the day. They either confirm it or swap it. The app does the deciding; the person keeps the final say.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">03</p><h2>Principles</h2></header>
+      <div class="cs-body">
+        <ol class="principles">
+          <li><b>One screen, one decision.</b> The whole experience fits on a single view with two actions: Confirm or Swap.</li>
+          <li><b>Show the reason before the result.</b> The first event of the day and the weather sit above the outfit, so the suggestion reads as reasoned rather than random.</li>
+          <li><b>Feel like a stylist, not a utility.</b> An editorial look, closer to a fashion magazine than a productivity app, makes a daily routine feel considered.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">04</p><h2>The screen</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Context, outfit, action. Read top to bottom.</p>
+        <p>The layout follows the order of a morning decision: what's happening today, what to wear, and whether to accept it.</p>
+        <div class="anno">
+          <ol class="anno-list">
+            <li><h3 class="eyebrow">A · Day context</h3><p>A pill pairs the first calendar event (10:00 AM, Client Pitch) with local weather (New York, 55°F and rainy). These two inputs drive the recommendation.</p></li>
+            <li><h3 class="eyebrow">B · Look header</h3><p>A numbered look and tags that translate context into dress requirements: rain-ready, client-facing.</p></li>
+            <li><h3 class="eyebrow">C · Outfit card</h3><p>Three pieces in a framed grid: outerwear at full height as the anchor, top and trousers stacked beside it. Each tile carries its category and item name.</p></li>
+            <li><h3 class="eyebrow">D · Style profile</h3><p>A quiet line confirming which profile the look was selected for.</p></li>
+            <li><h3 class="eyebrow">E · Actions</h3><p>A sticky bar keeps the primary Confirm button in thumb reach. Swap is a secondary text action, so accepting is always the easier path.</p></li>
+          </ol>
+          <figure class="fig phone"><img src="projects/closet-allocation/look-01.jpg" width="911" height="1720" alt="The main screen: day context pill, look header, three-piece outfit card, style profile line and Confirm and Swap actions" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">05</p><h2>Interaction</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">Swap until it feels right, then confirm.</p>
+        <p>Swap replaces all three pieces with the next look and resets the confirmation. Confirm turns the button oxblood with a check, a clear signal that the decision is done for the day.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs phones3">
+      <figure class="fig phone"><img src="projects/closet-allocation/look-01.jpg" width="911" height="1720" alt="Look 01 suggested" loading="lazy"><figcaption class="mono">1 · Look 01 suggested</figcaption></figure>
+      <figure class="fig phone"><img src="projects/closet-allocation/look-02.jpg" width="911" height="1720" alt="Swap to Look 02" loading="lazy"><figcaption class="mono">2 · Swap to Look 02</figcaption></figure>
+      <figure class="fig phone"><img src="projects/closet-allocation/confirmed.jpg" width="911" height="1720" alt="Outfit confirmed" loading="lazy"><figcaption class="mono">3 · Outfit confirmed</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">06</p><h2>Visual system</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">A small, strict palette and two typefaces.</p>
+        <p>Warm neutrals let the clothing photography carry the colour. Oxblood is reserved for meaning: context icons, look labels and the confirmed state.</p>
+      </div>
+    </div>
+    <div class="wrap cs-figs">
+      <figure class="fig fig-wide">
+        <a href="projects/closet-allocation/design-system.png" target="_blank" rel="noopener" data-cursor="zoom"><img src="projects/closet-allocation/design-system.png" width="3200" height="2298" alt="Design system sheet: six colours, Cormorant Garamond and Manrope type samples, and the context pill, button and tile components" loading="lazy"></a>
+        <figcaption class="mono"><span>Colour, type and components.</span><a class="u link-arrow" href="projects/closet-allocation/design-system.png" target="_blank" rel="noopener">Full size <i>↗</i></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#E2D9CB" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">07</p><h2>Process</h2></header>
+      <div class="cs-body">
+        <ol class="principles process">
+          <li><b>Explore in Figma and Figma Make</b> Early screens and a React + Tailwind prototype tested the core idea: a single daily outfit card with Confirm and Swap.</li>
+          <li><b>Consolidate into one design</b> Separate design files were merged into a single screen with one palette (cream, ink, oxblood), one type pairing, and consistent spacing and component sizes.</li>
+          <li><b>Make the photography honest</b> The first photos didn't match their garment labels. Images were re-sourced, items renamed where needed, and every photo re-cropped to fill its tile, so each label describes exactly what's shown.</li>
+          <li><b>Build a working prototype</b> Using Claude, the design was built as a clickable prototype with two complete looks, working Swap and Confirm states, and clean image loading.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" data-bg="#F3EDE3" data-ink="#2A1A14">
+    <div class="wrap cs-grid">
+      <header class="cs-label"><p class="eyebrow">08</p><h2>Next steps</h2></header>
+      <div class="cs-body">
+        <p class="cs-lead">The concept covers the core daily moment. To grow it into a full product, the next areas to design are:</p>
+        <ul class="checks">
+          <li>Onboarding: photographing a wardrobe and setting a style profile.</li>
+          <li>Wardrobe management: adding, tagging and retiring pieces.</li>
+          <li>Item detail: why a piece was chosen and what else it pairs with.</li>
+          <li>Learning from swaps, so recommendations improve over time.</li>
+          <li>User testing to measure how much morning decision time it actually saves.</li>
+        </ul>
+        <p class="sources">Outfit photos in the screens and prototype are from Unsplash.</p>
+        <p class="doc-actions"><a class="u link-arrow" href="projects/closet-allocation/prototype.html" target="_blank" rel="noopener">Try the prototype <i>↗</i></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-cta alt" data-bg="#5C6532" data-ink="#F3EDE3">
+    <div class="wrap">
+      <p class="eyebrow">Still thirsty?</p>
+      <a class="cta-big" href="work.html" data-cursor="more"><span class="cta-text">Back to the menu</span><i aria-hidden="true">←</i></a>
+      <p class="cta-note">Or <a class="u" href="index.html#contact">order a coffee chat</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="resume" data-bg="#2A1A14" data-ink="#F3EDE3">
+  <div class="wrap">
+    <div class="top">
+      <span class="big" aria-label="subrews_.co"><span>sub</span><span>rews</span><span>_</span><span><span style="color:var(--steam)">.</span>co</span></span>
+      <ul>
+        <li><a class="link-arrow" href="#resume">Resume <i>↗</i></a></li>
+        <li><a class="link-arrow" href="https://linkedin.com/in/subha-mostafiz" target="_blank" rel="noopener">LinkedIn <i>↗</i></a></li>
+        <li><a class="link-arrow" href="index.html#contact">Email <i>↗</i></a></li>
+      </ul>
+    </div>
+    <div class="bottom mono">
+      <span>Brewed by hand by a nomad · © 2026</span>
+      <a href="index.html">Back to the beans ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js?v=20261031a"></script>
+</body>
+</html>

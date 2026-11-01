@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<title>Closet Allocation</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#d8d4cd;color:#1b1a17;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible{outline:1px solid #75293a;outline-offset:3px}
+a{color:#75293a}a:hover{color:#1b1a17}
+</style>
+</helmet>
+<main style="min-height:100svh;display:flex;justify-content:center;background:linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px) #d8d4cd;background-size:100% 8px;">
+  <div data-screen-label="01 Today" style="position:relative;width:100%;max-width:430px;min-height:100svh;display:flex;flex-direction:column;background:#f4f0e8;box-shadow:0 20px 80px rgba(25,22,18,0.16);overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;opacity:0.23;background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E&quot;);"></div>
+
+    <header style="position:relative;height:88px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:16px 20px 0;border-bottom:1px solid rgba(27,26,23,0.22);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;letter-spacing:-0.12em;line-height:1;">C<span style="color:#75293a;font-style:italic;font-weight:400;">/</span>A</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:500;letter-spacing:0.04em;line-height:0.95;text-transform:uppercase;">Closet<br>Allocation</p>
+      <p style="font-size:9px;font-weight:600;letter-spacing:0.16em;">TUESDAY · 15 OCT</p>
+    </header>
+
+    <section aria-label="Today’s context" style="position:relative;min-height:64px;margin:16px 20px 0;padding:8px 16px;display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);align-items:center;gap:12px;border:1px solid rgba(27,26,23,0.22);border-radius:999px;">
+      <div style="min-width:0;display:flex;align-items:center;gap:8px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#75293a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M7 3v3M17 3v3M4 9h16M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5Z"></path></svg>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:3px;">
+          <span style="color:#777169;font-size:9px;font-weight:600;letter-spacing:0.16em;">10:00 AM</span>
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Client Pitch</strong>
+        </div>
+      </div>
+      <span style="width:1px;height:28px;background:rgba(27,26,23,0.22);"></span>
+      <div style="min-width:0;display:flex;align-items:center;gap:8px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#75293a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex:none;"><path d="M7.5 16.5h9a4 4 0 0 0 .6-7.95A5.75 5.75 0 0 0 6.2 7.8a4.4 4.4 0 0 0 1.3 8.7Z"></path><path d="m9 19-1 2M13 19l-1 2M17 19l-1 2"></path></svg>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:3px;">
+          <span style="color:#777169;font-size:9px;font-weight:600;letter-spacing:0.16em;">NEW YORK</span>
+          <strong style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">55°F &amp; Rainy</strong>
+        </div>
+      </div>
+    </section>
+
+    <section aria-live="polite" style="position:relative;flex:1;padding:28px 20px 24px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;">
+        <div>
+          <p style="margin-bottom:6px;color:#75293a;font-size:9px;font-weight:600;letter-spacing:0.16em;">{{ issue }} · ALLOCATED FOR TODAY</p>
+          <h1 style="max-width:255px;font-family:'Cormorant Garamond',serif;font-size:34px;font-style:italic;font-weight:400;letter-spacing:-0.04em;line-height:0.9;text-wrap:pretty;">The considered choice.</h1>
+        </div>
+        <p style="color:#777169;font-size:9px;font-weight:600;letter-spacing:0.16em;line-height:1.55;text-align:right;">RAIN-READY<br>CLIENT-FACING</p>
+      </div>
+
+      <article style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:202px 154px;gap:2px;padding:2px;border:1px solid rgba(27,26,23,0.55);background:#1b1a17;">
+        <div style="position:relative;grid-row:span 2;overflow:hidden;background:#d8d2c7;">
+          {{ p0.img }}
+          <span style="position:absolute;top:10px;left:10px;padding:4px 6px;color:#f8f4ec;background:rgba(27,26,23,0.58);font-size:9px;font-weight:600;letter-spacing:0.16em;">01</span>
+          <div style="position:absolute;left:0;right:0;bottom:0;min-height:40px;padding:8px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid rgba(27,26,23,0.22);background:rgba(244,240,232,0.88);backdrop-filter:blur(8px);">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;">Outerwear</span>
+            <strong style="font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ p0.name }}</strong>
+          </div>
+        </div>
+        <div style="position:relative;overflow:hidden;background:#d8d2c7;">
+          {{ p1.img }}
+          <span style="position:absolute;top:10px;left:10px;padding:4px 6px;color:#f8f4ec;background:rgba(27,26,23,0.58);font-size:9px;font-weight:600;letter-spacing:0.16em;">02</span>
+          <div style="position:absolute;left:0;right:0;bottom:0;min-height:40px;padding:8px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid rgba(27,26,23,0.22);background:rgba(244,240,232,0.88);backdrop-filter:blur(8px);">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;">Top</span>
+            <strong style="font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ p1.name }}</strong>
+          </div>
+        </div>
+        <div style="position:relative;overflow:hidden;background:#d8d2c7;">
+          {{ p2.img }}
+          <span style="position:absolute;top:10px;left:10px;padding:4px 6px;color:#f8f4ec;background:rgba(27,26,23,0.58);font-size:9px;font-weight:600;letter-spacing:0.16em;">03</span>
+          <div style="position:absolute;left:0;right:0;bottom:0;min-height:40px;padding:8px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid rgba(27,26,23,0.22);background:rgba(244,240,232,0.88);backdrop-filter:blur(8px);">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;">Trousers</span>
+            <strong style="font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ p2.name }}</strong>
+          </div>
+        </div>
+      </article>
+
+      <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;color:#777169;font-size:10px;letter-spacing:0.04em;">
+        <span>Selected for your profile</span>
+        <i style="width:3px;height:3px;border-radius:50%;background:#75293a;"></i>
+        <strong style="color:#4b4741;font-weight:600;">Professional / Minimalist</strong>
+      </div>
+    </section>
+
+    <aside aria-label="Outfit actions" style="position:sticky;bottom:0;z-index:10;padding:16px 20px 10px;display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(27,26,23,0.22);background:rgba(244,240,232,0.94);box-shadow:0 -18px 40px rgba(27,26,23,0.08);backdrop-filter:blur(18px);">
+      <sc-if value="{{ confirmed }}" hint-placeholder-val="{{ false }}">
+        <button type="button" style="width:100%;height:52px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;color:#f8f4ec;background:#75293a;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">
+          <span>Outfit confirmed</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="m5 12.5 4.25 4.25L19 7"></path></svg>
+        </button>
+      </sc-if>
+      <sc-if value="{{ notConfirmed }}" hint-placeholder-val="{{ true }}">
+        <button type="button" onClick="{{ confirm }}" style="width:100%;height:52px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;color:#f8f4ec;background:#1b1a17;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:background 200ms ease,transform 120ms ease;" style-hover="background:#75293a;" style-active="transform:scale(0.99);">
+          <span>Confirm outfit choice</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M5 12h14M14 7l5 5-5 5"></path></svg>
+        </button>
+      </sc-if>
+      <button type="button" onClick="{{ swap }}" style="width:100%;height:44px;color:#4b4741;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;text-decoration:underline;text-decoration-color:rgba(27,26,23,0.3);text-underline-offset:4px;" style-active="transform:scale(0.99);">Swap wardrobe items</button>
+      <span style="width:105px;height:3px;margin:2px auto 0;background:#1b1a17;"></span>
+    </aside>
+  </div>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LOOKS = [
+  { issue: 'LOOK 01', pieces: [
+    { name: 'Stone trench', src: 'https://images.unsplash.com/photo-1579171931975-97962e46be2d?auto=format&fit=crop&w=900&q=86', alt: 'Close-up of a stone trench coat being buttoned', position: 'center' },
+    { name: 'Ivory knit', src: 'https://images.unsplash.com/photo-1598771090885-a45c48fe2a79?auto=format&fit=crop&w=700&q=86', alt: 'Woman wearing an ivory knit turtleneck', position: 'center 26%' },
+    { name: 'Charcoal trouser', src: 'https://images.unsplash.com/photo-1591900946972-02f491a90e43?auto=format&fit=crop&w=700&q=86', alt: 'Wide-leg charcoal trousers', position: 'center bottom' },
+  ]},
+  { issue: 'LOOK 02', pieces: [
+    { name: 'Taupe mac', src: 'https://images.unsplash.com/photo-1617733459995-514e10a50d51?auto=format&fit=crop&w=900&q=86', alt: 'Woman wearing a long taupe coat', position: 'center' },
+    { name: 'Eyelet blouse', src: 'https://images.unsplash.com/photo-1738651875566-859920488d0d?auto=format&fit=crop&w=700&q=86', alt: 'White eyelet blouse with ruffle trim', position: 'center 30%' },
+    { name: 'Cream trouser', src: 'https://images.unsplash.com/photo-1748341545593-12c86c6ab718?auto=format&fit=crop&w=700&q=86', alt: 'Cream trousers worn with brown suede loafers', position: 'center top' },
+  ]},
+];
+class Component extends DCLogic {
+  state = { i: 0, confirmed: false };
+  piece(p) {
+    return { ...p, img: React.createElement('img', { key: p.src, src: p.src, alt: p.alt, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.position, filter: 'saturate(0.72) contrast(0.94)' } }) };
+  }
+  renderVals() {
+    const look = LOOKS[this.state.i];
+    return {
+      issue: look.issue,
+      p0: this.piece(look.pieces[0]), p1: this.piece(look.pieces[1]), p2: this.piece(look.pieces[2]),
+      confirmed: this.state.confirmed,
+      notConfirmed: !this.state.confirmed,
+      confirm: () => this.setState({ confirmed: true }),
+      swap: () => this.setState(s => ({ i: (s.i + 1) % LOOKS.length, confirmed: false })),
+    };
+  }
+}
+</script>
+</body>
+</html>

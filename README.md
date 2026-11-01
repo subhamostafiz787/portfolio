@@ -6,6 +6,7 @@ Plain HTML, CSS and JS. No build step and no dependencies.
 index.html   home: hero, the brew story, "See the work" link, contact
 work.html    the work page: project cards
 notebookcrm.html  case study page: prototype link + the case study as native sections (files in projects/notebookcrm/)
+closet-allocation.html  case study page: prototype link + native sections (files in projects/closet-allocation/)
 styles.css   all styles for both pages (palette tokens are at the top)
 portrait.webp  hero line drawing (transparent background)
 main.js      both pages: scroll-drawn line, page transition, nav, order counter, cursor
