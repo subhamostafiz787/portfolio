@@ -88,11 +88,10 @@ button{font:inherit;color:inherit}
 .work .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,72px)}
 .work h2,.page-title{margin:14px 0 0;font-size:clamp(48px,7vw,112px);line-height:.92;letter-spacing:-.05em;font-weight:500}
 .work .head p{margin:0;max-width:34ch;font-weight:350}
-.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:56px 36px}
+.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 36px}
+@media (max-width:720px){.menu{grid-template-columns:minmax(0,1fr)}}
 .card{display:flex;flex-direction:column;gap:16px;min-width:0}
-.card:first-child{grid-column:1/-1}
 .cover{position:relative;aspect-ratio:16/10;max-width:100%;border-radius:22px;overflow:hidden;background:var(--tint);display:grid;place-items:center}
-.card:first-child .cover{aspect-ratio:21/9}
 .cover .num{position:absolute;left:24px;top:14px;font-family:var(--f-hand);font-size:56px;line-height:1;color:var(--espresso)}
 .cover .ph{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-align:center;padding:24px;color:var(--espresso);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .cover svg{position:absolute;right:28px;bottom:22px;width:64px;height:64px;color:var(--espresso)}
@@ -204,7 +203,7 @@ a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-
 .card:hover .cover-phones img:nth-of-type(2),.card:focus-visible .cover-phones img:nth-of-type(2){transform:translateY(-16px)}
 .cover-full img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .card:hover .cover-full img,.card:focus-visible .cover-full img{transform:scale(1.03)}
-.cover-full .num{color:var(--cream);z-index:1}
+.cover-full .num{top:auto;bottom:10px;color:var(--cream);z-index:1}
 .page-case .work{padding-bottom:clamp(64px,8vw,112px)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px 32px;margin:0 0 clamp(40px,5vw,64px);padding-top:24px;border-top:1.5px solid var(--espresso)}
 .facts dt{text-transform:uppercase;letter-spacing:.14em;opacity:.65;margin-bottom:6px}
